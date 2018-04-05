@@ -1,0 +1,86 @@
+@charset "utf-8"
+
+$break-small: 404px
+$break-middle: 680px
+
+*
+  margin: 0
+  padding: 0
+
+html, body
+  font-family: lucida grande, tahoma, verdana, arial, sans-serif
+  width: 100%
+  height: 100%
+  background: #2d4052
+  position: absolute
+  background: -webkit-linear-gradient(left, #2d4052 25%, white 50%, #f19c14 75%)
+  background: -o-linear-gradient(right, #2d4052 25%, white 50%, #f19c14 75%)
+  background: -moz-linear-gradient(right, #2d4052 25%, white 50%, #f19c14 75%)
+  background: linear-gradient(to right, #2d4052 25%, white 50%, #f19c14 75%)
+  
+h1, h1 a
+  font-size: 20px
+  color: #f19c14
+
+a
+  color: #fff
+  text-decoration: none
+
+header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  background-color: rgba(0, 0, 0, .7)
+  padding: 10px
+
+  h6
+    color: #fff
+    line-height: 18px
+    font-weight: 400
+    letter-spacing: 3px
+
+    a:hover
+      color: rgba(254, 253, 251, .7)
+
+    @media screen and (max-width: $break-small)
+      margin-top: 10px
+      text-align: center
+      line-height: 25px
+
+      span
+        display: none
+    
+    @media screen and (min-width: $break-small) and (max-width: $break-middle)
+      margin-top: 10px
+      text-align: center
+    
+    @media screen and (min-width: $break-middle)
+      position: absolute
+      top: 12px
+      right: 108px
+
+  nav
+    position: absolute
+    top: 12px
+    right: 20px
+
+    a:not(:first-of-type)
+      margin-left: 8px
+    
+    i.fa-1x:hover 
+      color: #f19c14
+
+#central-frame
+  margin-top: 44px
+  text-align: center
+
+  @media screen and (min-width: $break-small) and (max-width: $break-middle)
+    margin-top: 72px
+  
+  @media screen and (max-width: $break-small)
+    margin-top: 104px
+
+#formulario
+  width: 100%
+  height: 600px
