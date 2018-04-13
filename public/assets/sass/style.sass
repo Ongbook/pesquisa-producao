@@ -71,60 +71,101 @@ header
     i.fa-1x:hover 
       color: #f19c14
 
-.content
-  background-color: rgba(0,0,0,0.7)
-  width: 80%
-  margin: 150px auto 15px auto
-  border-radius: 15px
-  padding: 20px
-  font-family: arial
-  max-width: 500px
+.main
+  position: absolute
+  width: 100%
+
+  .content
+    background-color: rgba(0,0,0,0.7)
+    width: 80%
+    margin: 150px auto 15px auto
+    border-radius: 15px
+    padding: 20px
+    font-family: arial
+    max-width: 500px
+    
+    p
+      text-align: center
+      color: white
+      line-height: 1.4
+
+      a
+        text-decoration: underline
+        text-decoration-style: dotted
+
+    p:not(:first-of-type)
+      margin-top: 10px
+
+    .btn
+      border: 1px solid #25692A
+      width: 100%
+      border-radius: 4px
+      cursor: pointer
+      font-family: Verdana
+      font-weight: bold
+      font-size: 18px
+      padding: 20px 0
+      margin-top: 20px
+
+      &:active
+        position: relative
+        top: 1px
+
+    .btn-form
+      border-color: #eb9b48
+      background: linear-gradient(to bottom, #f7d6b3 5%, #eb9b48 100%)
+      box-shadow: inset 0px 1px 0px 0px #fdf7f0
+      color: #333
+      text-shadow: 0px 1px 0px #ffee66
+      margin-bottom: 15px
+
+      &:hover
+        background: linear-gradient(to bottom, #eb9b48 5%, #f7d6b3 100%)
+
+    .btn-share
+      border-color: #46a7f5
+      background: linear-gradient(to bottom, #86c6f8 5%, #46a7f5 100%)
+      box-shadow: inset 0px 1px 0px 0px #d7ecfd
+      color: #fff
+      text-shadow: 0px 1px 0px #528009
+
+      &:hover
+        background: linear-gradient(to bottom, #46a7f5 5%, #86c6f8 100%)
+
+.popup
+  opacity: 0
+  visibility: hidden
+  background-color: rgba(0, 0, 0, 0.8)
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: 999
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .share-buttons
+    background-color: rgba(0,0,0,0.8)
+    border-radius: 5px
+    padding: 20px
+    position: relative
+
+    .popup-close
+      position: absolute
+      background-color: black
+      padding: 2px 8px 5px 8px
+      color: white
+      right: -13px
+      top: -12px
+      border: 3px solid white
+      border-radius: 15px
+      font-weight: bold
+      cursor: pointer
+
+      &:active
+        top: -11px
+    
   
-  p
-    text-align: center
-    color: white
-    line-height: 1.4
-
-  p:not(:first-of-type)
-    margin-top: 10px
-  
-
-  .btn
-    border: 1px solid #25692A
-    width: 100%
-    border-radius: 4px
-    cursor: pointer
-    font-family: Verdana
-    font-weight: bold
-    font-size: 18px
-    padding: 20px 0
-    margin-top: 20px
-
-    &:active
-      position: relative
-      top: 1px
-
-  .btn-form
-    border-color: #eb9b48
-    background: linear-gradient(to bottom, #f7d6b3 5%, #eb9b48 100%)
-    box-shadow: inset 0px 1px 0px 0px #fdf7f0
-    color: #333
-    text-shadow: 0px 1px 0px #ffee66
-    margin-bottom: 15px
-
-    &:hover
-      background: linear-gradient(to bottom, #eb9b48 5%, #f7d6b3 100%)
-
-  .btn-share
-    border-color: #46a7f5
-    background: linear-gradient(to bottom, #86c6f8 5%, #46a7f5 100%)
-    box-shadow: inset 0px 1px 0px 0px #d7ecfd
-    color: #fff
-    text-shadow: 0px 1px 0px #528009
-
-    &:hover
-      background: linear-gradient(to bottom, #46a7f5 5%, #86c6f8 100%)
-
 #central-frame
   margin-top: 44px
   text-align: center
