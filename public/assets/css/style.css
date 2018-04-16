@@ -89,7 +89,7 @@ header {
       font-weight: bold;
       font-size: 18px;
       padding: 20px 0;
-      margin-top: 20px; }
+      margin-top: 10px; }
       .main .content .btn:active {
         position: relative;
         top: 1px; }
@@ -114,7 +114,7 @@ header {
 .popup {
   opacity: 0;
   visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   width: 100%;
   height: 100%;
@@ -125,9 +125,9 @@ header {
   .popup .share-buttons {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
-    padding: 20px;
+    padding: 30px 20px 20px;
     position: relative; }
-    .popup .share-buttons .popup-close {
+    .popup .share-buttons span.popup-close {
       position: absolute;
       background-color: black;
       padding: 2px 8px 5px 8px;
@@ -138,8 +138,11 @@ header {
       border-radius: 15px;
       font-weight: bold;
       cursor: pointer; }
-      .popup .share-buttons .popup-close:active {
+      .popup .share-buttons span.popup-close:active {
         top: -11px; }
+    .popup .share-buttons .btn-items:not(:first-of-type) {
+      text-align: center;
+      margin: 20px 0 0; }
 
 #central-frame {
   margin-top: 44px;

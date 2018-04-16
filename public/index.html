@@ -10,19 +10,43 @@
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
+  <!-- meta tags-->
+  <meta name="keywords" content="ongbook, catalogo de entidades sociais, inovação social, tecnologia no terceiro setor" />
+  <meta name="description" content="Se você é reponsável por uma Entidade Social, faça a diferença e participe dessa pesquisa" />
+  <meta name="subject" content="Catálogo de Entidades Sociais e suas demandas. Perfil das Entidades e ONGs do Brasil">
+  <meta name="language" content="pt-br">
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Equipe Ongbook, dev@ongbook.org">
+  <meta name="owner" content="Equipe Ongbook">
+  <meta name="url" content="https://ongbook.org">
+
+  <!-- open graph -->
+  <meta property="og:url" content="https://ongbook.org" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Perfil das Entidades e ONGs do Brasil" />
+  <meta property="og:description" content="Se você é reponsável por uma Entidade Social, faça a diferença e participe dessa pesquisa" />
+  <meta property="og:image" content="https://ongbook.org/public/assets/img/questionario.jpg" />
+
   <!-- Simple Popup (Social media btn) -->
   <script language=javascript type="text/javascript">
     function changePopupVisibility(condition) {
       let popup = document.getElementById('popup');
       if (condition === 'open') {
-        console.log("Abriu");
+        console.log("open popup");
         popup.style.opacity = 1;
         popup.style.visibility = 'visible';
       } else {
-        console.log("Fechou");
+        console.log("close popup");
         popup.style.opacity = 0;
         popup.style.visibility = 'hidden';
       }
+    }
+  </script>
+
+  <!-- Google btn share - Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
+  <script src="https://apis.google.com/js/platform.js" async defer>
+    {
+      lang: 'pt-BR'
     }
   </script>
 
@@ -61,12 +85,13 @@
         <br>Pra isso
         <strong>precisamos da sua atitude</strong>
       </p>
-      <p>Se você é responsável por uma Entidade Social,
+      <p>Se você é
+        <strong>responsável por uma Entidade Social</strong>,
         <br>basta preencher um simples
         <a href="pesquisa.html">formulário</a>
       </p>
       <button class="btn btn-form" onclick="javascript:location.href='pesquisa.html'">Preencher questionário</button>
-      <p>Ou se conhece alguém que seja,
+      <p>Ou conhece alguém que seja,
         <br>
         <a href="javascript:changePopupVisibility('open')">compartilhe</a> com essa pessoa.</p>
       <button class="btn btn-share" onclick="javascript:changePopupVisibility('open')">Compartilhar</button>
@@ -75,35 +100,51 @@
 
   <div id="popup" class="popup">
     <div class="share-buttons">
-      <div class="popup-close" onclick="changePopupVisibility('close');">x</div>
-      
-      <!-- Facebook Button-->
+
+      <!-- close popup -->
+      <span class="popup-close" onclick="changePopupVisibility('close');">x</span>
+
+      <!-- Facebook btn -->
       <div class="btn-items">
-        <div class="fb-share-button" data-href="https://ongbook.org" data-layout="button_count" data-size="large" data-mobile-iframe="true">
-          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fongbook.org%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartilhar</a>
+        <div class="fb-share-button" data-href="https://ongbook.org" data-layout="button_count" data-size="small" data-mobile-iframe="true">
+          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fongbook.org%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartilhe</a>
         </div>
       </div>
 
-      <!-- Linkedin Button -->
+      <!-- Linkedin btn -->
       <div class="btn-items">
         <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: pt_BR</script>
         <script type="IN/Share" data-url="https://ongbook.org"></script>
       </div>
-      
-      <div class="btn-items">Twitter</div>
-      <div class="btn-items">Google+</div>
+
+      <!-- Twitter btn -->
+      <div class="btn-items">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Responsável por uma Entidade Social? Participe dessa pesquisa!"
+          data-via="_ongbook" data-hashtags="ongbook, incentiveasolidariedade" data-related="" data-dnt="true" data-show-count="true">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+
+      <!-- Google btn -->
+      <div class="btn-items">
+        <!-- Posicione esta tag onde você deseja que o botão compartilhar apareça. -->
+        <div class="g-plus" data-action="share" data-height="24" data-href="https://ongbook.org"></div>
+
+        <!-- Posicione este retorno de chamada onde achar necessário. -->
+        <script type="text/javascript">gapi.plus.go();</script>
+      </div>
+
     </div>
   </div>
 
   <!-- Facebook -->
   <div id="fb-root"></div>
   <script>(function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.12&appId=1877935842437516&autoLogAppEvents=1';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.12&appId=1877935842437516&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
   </script>
 
 </body>

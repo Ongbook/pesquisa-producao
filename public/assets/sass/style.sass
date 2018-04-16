@@ -105,7 +105,7 @@ header
       font-weight: bold
       font-size: 18px
       padding: 20px 0
-      margin-top: 20px
+      margin-top: 10px
 
       &:active
         position: relative
@@ -135,7 +135,7 @@ header
 .popup
   opacity: 0
   visibility: hidden
-  background-color: rgba(0, 0, 0, 0.8)
+  background-color: rgba(0, 0, 0, 0.9)
   position: fixed
   width: 100%
   height: 100%
@@ -147,10 +147,10 @@ header
   .share-buttons
     background-color: rgba(0,0,0,0.8)
     border-radius: 5px
-    padding: 20px
+    padding: 30px 20px 20px
     position: relative
 
-    .popup-close
+    span.popup-close
       position: absolute
       background-color: black
       padding: 2px 8px 5px 8px
@@ -164,8 +164,11 @@ header
 
       &:active
         top: -11px
-    
-  
+
+    .btn-items:not(:first-of-type)
+      text-align: center
+      margin: 20px 0 0
+
 #central-frame
   margin-top: 44px
   text-align: center
